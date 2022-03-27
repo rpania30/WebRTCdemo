@@ -1,15 +1,7 @@
-const HTTPS_PORT = 8443; //default port for https is 8443
-const HTTP_PORT = 80; //default port for http is 80
+const HTTPS_PORT = process.env.HTTPS_PORT || 8443; //default port for https is 8443
+const HTTP_PORT = process.env.HTTP_PORT || 80; //default port for http is 80
 
-const app = require("express")();
-const PORT = process.env.PORT || 3000;
 
-app.get("", (req, res) => {
-  res.send("");
-});
-app.listen(PORT, () => {
-  res.send("");
-});
 
 const fs = require('fs');
 const http = require('http');
