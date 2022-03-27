@@ -21,8 +21,10 @@
   },
   "homepage": "https://github.com/shanet/WebRTC-Example#readme",
   "dependencies": {
+    "dotenv": "^16.0.0",
     "heroku": "^7.60.0",
     "heroku-cli": "^7.0.9",
-    "ws": "^3.3.3"
+    "ws": "^3.3.3",
+    "yarn": "^1.22.18"
   }
 }

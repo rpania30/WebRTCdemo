@@ -1,5 +1,8 @@
-const HTTPS_PORT = process.env.HTTPS_PORT || 80; //default port for https is 80
-const HTTP_PORT = process.env.HTTP_PORT || 30; //default port for http is 30
+
+require("dotenv").config();
+
+const HTTPS_PORT = process.env.PORT || 443; //default port for https is 443
+//const HTTP_PORT = process.env.HTTP_PORT || 30; //default port for http is 30
 
 
 
@@ -67,13 +70,14 @@ wss.broadcast = function (data) {
   });
 };
 
+
 console.log('Server running ' + HTTPS_PORT);
 
 // ----------------------------------------------------------------------------------------
 
 // Separate server to redirect from http to https
-http.createServer(function (req, res) {
+/*http.createServer(function (req, res) {
   console.log(req.headers['host'] + req.url);
   res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
   res.end();
-}).listen(HTTP_PORT);
+}).listen(HTTP_PORT);*/
